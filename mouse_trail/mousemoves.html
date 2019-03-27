@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse</title>
+    <style>
+        .trail {
+            position: absolute;
+            height: 6px; width: 6px;
+            border-radius: 3px;
+            background: rebeccapurple;
+        }
+        .dot {
+            height: 8px;
+            width: 8px;
+            border-radius: 10px; /* rounds corners */
+            background: greenyellow;
+            position: static;
+        }
+        .pointer {
+
+        }
+        body {
+            height: 300px;
+        }
+    </style>
+</head>
+<div>
+    <div class="trail">
+    <div class="pointer"></div>
+    <div class="pointer"></div>
+    <div class="pointer"></div>
+</div>
+<body>
+
+
+<script>
+    'use strict';
+   const divArray = [];
+    document.addEventListener('mousemove', (evt) => {
+        const dot = document.createElement('div');
+        dot.className = ('trail');
+        dot.style.left = (event.pageX - 4) + "px";
+        dot.style.top = (event.pageY - 4) + "px";
+        document.querySelector('body').appendChild(dot);
+        divArray.push(dot);
+            if (divArray.length > 20) {
+              divArray[1].remove(dot)
+            }
+        });
+</script>
+</body>
+</html>

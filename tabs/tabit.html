@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const asTabs = (node) => {
+          let tabs = node.children;
+          for (tab of tabs) {
+          const button = document.createElement('button');
+          button.innerHTML = tab.innerHTML;
+          tab.prepend(button);
+          }
+        };
+        asTabs(document.querySelector('tab-panel'));
+    </script>
+</body>
+</html>

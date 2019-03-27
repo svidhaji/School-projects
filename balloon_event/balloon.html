@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<p id="bb">🎈</p>
+
+<script>
+  let size = 14;
+  const balloon1 = document.querySelector('p');
+  const balloonSize = (evt) => {
+    evt.preventDefault();
+
+    if (evt.key === 'ArrowUp'){
+      size += 10;
+      if(size > 200) {
+        balloon1.textContent = "💥";
+        document.removeEventListener('keyup', balloonSize);
+        document.removeEventListener('keydown', balloonSize);
+      }
+    } else if (evt.key === 'ArrowDown') {
+      size -= 10;
+    }
+    balloon1.style.fontSize = size + 'px';
+  };
+  document.addEventListener('keyup', balloonSize);
+  document.addEventListener('keydown', balloonSize);
+</script>
+</body>
+</html>
