@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .tabs {
+            display: flex;
+            border: 1px solid grey;
+            background-color: rosybrown;
+        }
+    </style>
 </head>
 <body>
+    <div id="tabs">
+        <div>Tab 1</div>
+        <div>Tab 2</div>
+    </div>
+
     <script>
         const asTabs = (node) => {
-          let tabs = node.children;
-          for (tab of tabs) {
+          let tabs = node.querySelectorAll('div');
+
+          for (let tab of tabs) {
           const button = document.createElement('button');
-          button.innerHTML = tab.innerHTML;
-          tab.prepend(button);
+          button.innerHTML = tab.dataset.tabset;
+          node.insertBefore(button, tab);
           }
         };
-        asTabs(document.querySelector('tab-panel'));
+        asTabs(document.querySelector('tabs'));
     </script>
 </body>
 </html>
