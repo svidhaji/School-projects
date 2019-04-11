@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lavender;
+}
+
+.box {
+    height: 100px;
+    width: 19.5%;
+    border: 1px solid black;
+    color: aliceblue;
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+    color: black;
+}
+
+#orange {
+    background-color: orange;
+}
+
+.clear {
+    clear: both;
+}
+
+#blue {
+    position: relative;
+}
+
+p {
+    color: green;
+    font-family: Consolas, sans-serif;
+}
+
+h1 {
+    display: inline-block;
+    font-style: italic;
+}
+
+div {
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+nav {
+    overflow: auto;
+    width: 100%;
+    padding-top: 0;
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+
+img {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+
+}
+
+.kuvatext {
+    position: absolute;
+    top: 250px;
+    left: 680px;
+    color: gold;
+
+}
+
+.textii {
+    position: relative;
+    text-align: center;
+}
+@media only screen and (max-width: 1050px) {
+
+body{
+    display: block;
+}
+}
