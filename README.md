@@ -1,1 +1,1 @@
-# Git komennot
+#School projects..
