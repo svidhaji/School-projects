@@ -11,14 +11,15 @@ const inputPassword = document.getElementById('password');
 const button = document.querySelector('.button-submit');
 
 const pattern = "^[a-z0-9_-]+(\.[a-z0-9_-]+)*@([a-z0-9_-]+\.)+[a-z]{2,6}$";
-const pattern2 = "^\+[0-9]{5,}$";
+const pattern2 = "^\+[0-9]{5}$";
+const patternN = "^[a-zA-Z ]*$";
 
 
 function validation() {
-  if (inputN.value !== "" && inputEmail.value !== pattern && pattern.test(inputP)){
-    inputN.style.backgroundColor = 'white';
+  if (inputN.value === patternN & inputEmail.value === pattern && inputPostal.value === pattern2 ){
+    inputN.style.backgroundColor = "skyblue";
   } else {
-    inputN.style.backgroundColor = 'red';
+    inputN.style.backgroundColor = "purple";
   }
 }
 
